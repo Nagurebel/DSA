@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Inserting</title>
+</head>
+<script>
+    let data = [60, 30, 10, 67, 40];
+
+    // let ele = 11;
+    // let position = 2;
+
+    // for (let i = data.length - 1; i >= 0; i--) {
+    //     if (i >= position) {
+    //         data[i + 1] = data[i]
+    //         console.log(i)
+    //         if (i == position) {
+    //             data[i] = ele
+    //         }
+    //     }
+    // }
+    // console.log(data)
+    const submit = () => {
+        let position = document.getElementById("position").value;
+        let element = document.getElementById("element").value;
+        element = parseInt(element);
+        for (let i = data.length - 1; i >= 0; i--) {
+            if (i >= position) {
+                data[i + 1] = data[i]
+                if (i == position) {
+                    data[i] = element;
+                }
+            }
+        }
+        console.log(data)
+    }
+</script>
+
+<body>
+    <input type="text" id="position" placeholder="enter positon">
+    <input type="text" id="element" placeholder="enter element">
+    <button onclick="submit()">submit</button>
+</body>
+
+</html>

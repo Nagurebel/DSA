@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element</title>
+    <script>
+        let data = [30, 20, 45, 76, 20, 80];
+        // console.log("previous data", data)
+        // let position = 2;
+        // for (let i = position; i < data.length - 1; i++) {
+        //     data[i] = data[i + 1]
+        // }
+        // data.length = data.length - 1
+        // console.log(data)
+
+        const deleteEelement = () => {
+            let position = document.getElementById('position').value;
+            position = parseInt(position)
+            if (position > data.length) return alert("enter value below array length")
+            for (let i = position; i < data.length - 1; i++) {
+                data[i] = data[i + 1]
+            }
+            data.length = data.length - 1
+            console.log(data)
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="enter element">
+    <button onclick="deleteEelement()">delete</button>
+</body>
+
+</html>
