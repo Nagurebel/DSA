@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect Recursion</title>
+    <script>
+        let money = 100;
+        let totalApple = 0;
+
+        // function buyApple(x) {
+        //     if (x > 0) {
+        //         totalApple++
+        //         buyApple(x - 10)
+        //         console.log("I have", x, "Rs", "But i have", totalApple, "Apples")
+        //         // buyMore(x)
+        //     } else {
+        //         console.log("Now i don't have money", "But i have", totalApple, "Apples")
+        //     }
+        // }
+        // buyApple(money)
+
+        // function buyApple(x) {
+        //     if (x > 0) {
+        //         console.log("I have", x, "Rs", "But i have", totalApple, "Apples")
+        //         buyMore(x)
+        //     } else {
+        //         console.log("Now i don't have money", "But i have", totalApple, "Apples")
+        //     }
+        // }
+        // buyApple(money)
+
+        // function buyMore(x) {
+        //     x = x - 10;
+        //     totalApple++
+        //     buyApple(x)
+        //     // console.log("buy more", x)
+        // }
+
+        // function buyApple(x) {
+        //     if (x > 0) {
+        //         console.log("I have", x, "Rs", "But i have", totalApple, "Apples")
+        //         buyMore(x - 10)
+        //     } else {
+        //         console.log("Now i don't have money", "But i have", totalApple, "Apples")
+        //     }
+        // }
+        // buyApple(money)
+
+        // function buyMore(x) {
+        //     x = x - 10;
+        //     totalApple++
+        //     buyApple(x - 5)
+        //     // console.log("buy more", x)
+        // }
+
+
+        function test(x) {
+            console.log("x", x)
+            if (x > 0) {
+                test(x - 1)
+            }
+        }
+        let data = 5;
+        test(data)
+    </script>
+</head>
+
+<body>
+    <h1>Indirect Recursion</h1>
+</body>
+
+</html>
